@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Creation</title>
+</head>
+<body>
+    <script>
+        var student = {
+            name:"Mahesh",
+            sclass:5,
+            rollno:13
+        };
+        document.write("Before Deletion : ");
+        document.write(Object.keys(student));
+        document.write("<br>");
+        document.write("<br>");
+        delete student.rollno;
+        document.write("After Deletion : ");
+        document.write(Object.keys(student));
+        document.write("<br>");
+        document.write("<br>");
+        document.write("Length of the Object : ");
+        document.write(Object.length);
+        document.write("<br>");
+        document.write("<br>");
+        document.write("Display name of the student : ");
+        document.write(student.name);
+
+
+    // console.log(student);
+    // document.write(student);
+
+    </script>
+</body>
+</html>
