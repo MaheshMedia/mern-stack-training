@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        Object.objsize = function (Myobj) {
+            var osize = 0, key;
+            for (key in Myobj) {
+                if (Myobj.hasOwnProperty(key)) osize++;
+            }
+            return osize;
+        };
+
+        var student = {
+            name: "Mahesh Naik",
+            sclass: "2",
+            rollno: 13
+        };
+
+        var objsize = Object.objsize(student);
+        console.log('Size of the current object : ' + objsize);
+
+    </script>
+</body>
+
+</html>

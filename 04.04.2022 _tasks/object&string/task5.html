@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        string_chop = function (str, size) {
+                if (str == null) return [];
+                str = String(str);
+                size = ~~size;
+                return size > 0 ? str.match(new RegExp('.{1,' + size + '}', 'g')) : [str];
+            }
+            console.log(string_chop('Maheshnaik'));
+            console.log(string_chop('Maheshnaik', 2));
+            console.log(string_chop('Maheshnaik', 3));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        insert = function insert(main_string, ins_string, pos) {
+            if (typeof (pos) == "undefined") {
+                pos = 0;
+            }
+            if (typeof (ins_string) == "undefined") {
+                ins_string = '';
+            }
+            return main_string.slice(0, pos) + ins_string + main_string.slice(pos);
+        }
+        console.log(insert('My name is .'));
+        console.log(insert('My name is .', 'Mahesh '));
+        console.log(insert('My name is .', 'Mahesh ', 11));
+
+    </script>
+</body>
+
+</html>
