@@ -1,0 +1,37 @@
+<!-- async function wait() {
+    await new Promise(resolve => setTimeout(resolve, 1000));
+  
+    return 10;
+  }
+  
+  function f() {
+    // ...what should you write here?
+    // we need to call async wait() and wait to get 10
+    // remember, we can't use "await"
+  } -->
+  
+  
+  
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function wait() {
+  await new Promise(resolve => setTimeout(resolve, 1000));
+
+  return 10;
+}
+
+function f() {
+  wait().then(result=>alert(result));
+}
+f();
+    </script>
+</body>
+</html>
