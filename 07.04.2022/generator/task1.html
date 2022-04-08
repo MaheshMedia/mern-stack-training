@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // iterator generator
+        function* iterator(start, end) {
+            while (start < end) {
+                yield start;
+                start++;
+            }
+        }
+
+        //function to log nums from start to end using iterator generator
+        function displaySequence() {
+            let start = Number(prompt("enter a start num"));
+            let end = Number(prompt("enter a end num"));
+            let seq = iterator(start, end);
+            let num = seq.next();
+
+            while (!num.done) {
+                console.log(num.value);
+                num = seq.next();
+            }
+        }
+
+        displaySequence();
+    </script>
+</body>
+
+</html>
