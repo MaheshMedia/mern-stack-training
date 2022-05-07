@@ -1,0 +1,139 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(238, 238, 238);
+  height: 100vh;
+}
+.App-heading {
+  padding: 30px 0;
+  font-size: 44px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+/* DisplayTaks  */
+
+.DisplayTasks {
+  background-color: #fff;
+  width: min(80%, 500px);
+  border-radius: 10px;
+}
+.DisplayTasks-count {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 0.8rem;
+  color: #333;
+  padding: 5px 10px;
+}
+/* AddTask  */
+.AddTask {
+  height: 60px;
+  border-radius: 10px;
+  width: min(80%, 500px);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+/* Add form  */
+
+.AddTask-form {
+  height: 28px;
+  width: 40px;
+  position: absolute;
+  top: 17px;
+  left: 100%;
+  z-index: 1;
+  transition: all 0.15s ease-in-out;
+}
+.AddTask-form > input[type="text"] {
+  height: 100%;
+  width: 100%;
+  border: none;
+  padding: 0 10px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.active-form {
+  height: 100%;
+  width: 100%;
+  display: block;
+  top: 0;
+  left: 0;
+}
+
+/* Add button  */
+.AddTask-btn {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0 10px;
+  padding: 0 10px;
+}
+.AddTask-btn > button {
+  height: 32px;
+  width: 60px;
+  background-color: #fff;
+  border-radius: 32px;
+  border: none;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.AddTask-btn > button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Task  */
+.Task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 10px;
+}
+.Task-data {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* display delete icon on hover   */
+
+.Task:hover > .Task-delete {
+  display: block;
+}
+
+/* custom delete button  */
+.Task-delete {
+  display: none;
+  height: 1.5rem;
+  aspect-ratio: 1;
+  position: relative;
+  border-radius: 50%;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+.Task-delete:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.Task-delete > div {
+  position: absolute;
+  height: 1.2px;
+  width: 0.8rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+}
+.Task-delete > div:first-child {
+  height: 0.8rem;
+  width: 1.2px;
+}
